@@ -15,5 +15,5 @@ func ListsEqual(list1, list2 []int) bool {
 		return false
 	}
 
-	return ListsEqual(list1[1:], list2[1:])	//führt die Funktion (also den Vergleich) ab der Stelle 1 (1:) aus
+	return ListsEqual(list1[1:], list2[1:]) //führt die Funktion (also den Vergleich) ab der Stelle 1 (1:) aus
 }
