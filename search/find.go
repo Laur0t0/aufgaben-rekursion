@@ -17,8 +17,15 @@ func Find(list []int, x int) int {
 		return -1
 	}
 
-	if list[0] != x {
-		return 1 + Find(list[1:], x)
+	if list[0] == x {
+		return 0
 	}
-	return 0
+
+	pos := Find(list[1:], x)
+	//Abbruchbedingung für pos < 0, pos wird -1, wenn es keine Schnittmenge zwischen der liste und x gibt
+	if pos == -1 {
+		return -1
+	}
+
+	return 1 + Find(list[1:], x)
 }
