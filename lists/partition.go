@@ -5,9 +5,8 @@ package lists
 // - Eine, die alle übrigen Elemente aus list enthält.
 func Partition(list []int, key int) ([]int, []int) {
 	// Verwende Kopien von list, damit die ursprüngliche Liste nicht verändert wird.
-	l1 := append([]int{}, list...)
-	l2 := append([]int{}, list...)
+	l1 := append([]int{}, FilterLess(list, key)...)
+	l2 := append([]int{}, FilterGreater(list, key)...)
 
-	// TODO
 	return l1, l2
 }
